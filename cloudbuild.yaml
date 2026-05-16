@@ -1,0 +1,7 @@
+steps:
+  - id: build image
+    name: 'gcr.io/cloud-builders/gcloud
+    script: |
+      docker build -t python-image .
+logsBucket: gs://sony-backend-bucket
+    
