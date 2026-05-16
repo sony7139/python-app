@@ -9,7 +9,7 @@ steps:
       docker tag python-image:latest asia-south1-docker.pkg.dev/tfm-demo-495907/tfm-repo/python-app:latest
       docker push asia-south1-docker.pkg.dev/tfm-demo-495907/tfm-repo/python-app:latest
   - id: deploy service
-    name: 'gcr.io/cloud-builders/docker'
+    name: 'gcr.io/cloud-builders/gcloud'
     script: |
       gcloud run deploy python_dev --image asia-south1-docker.pkg.dev/tfm-demo-495907/tfm-repo/python-app:latest --region asia-south1 
 logsBucket: gs://sony-backend-bucket
